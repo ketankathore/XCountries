@@ -1,0 +1,90 @@
+.app-shell {
+  min-height: 100vh;
+  padding: 32px 24px 80px;
+}
+
+.hero-panel {
+  max-width: 1080px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #2563eb;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.hero-panel h1 {
+  margin: 0;
+  font-size: clamp(2rem, 2.7vw, 2.6rem);
+  color: #0f172a;
+}
+
+.subtitle {
+  margin-top: 12px;
+  max-width: 640px;
+  margin-inline: auto;
+  color: #334155;
+  font-size: 1.05rem;
+}
+
+.country-grid {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+}
+
+.country-card {
+  background: #ffffff;
+  border: 1px solid #dbe3f0;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.country-flag {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  background: #eff6ff;
+}
+
+.country-name {
+  margin: 0;
+  font-weight: 700;
+  color: #0f172a;
+  text-align: center;
+}
+
+.status-message {
+  max-width: 1080px;
+  margin: 0 auto;
+  text-align: center;
+  color: #334155;
+  font-size: 1rem;
+}
+
+.error-state {
+  color: #b42318;
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 24px 16px 60px;
+  }
+
+  .country-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
