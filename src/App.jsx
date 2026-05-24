@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 
-const INITIAL_BATCH_SIZE = 24
+const INITIAL_BATCH_SIZE = 250
 const LOAD_MORE_STEP = 24
 
 function App() {
