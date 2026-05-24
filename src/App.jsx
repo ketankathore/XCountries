@@ -69,16 +69,20 @@ function App() {
         <p className="status-message error-state">{error}</p>
       ) : (
         <section className="country-grid" aria-label="Country flags gallery">
-          {visibleCountries.map((country) => (
-            <article className="country-card" key={country.abbr ?? country.name}>
-              <img
-                src={country.flag}
-                alt={`${country.name} flag`}
-                className="country-flag"
-              />
-              <p className="country-name">{country.name}</p>
-            </article>
-          ))}
+          {visibleCountries.map((country) => {
+            const countryName = country.name || 'Country'
+
+            return (
+              <article className="country-card" key={country.abbr ?? countryName}>
+                <img
+                  src={country.flag}
+                  alt={`${countryName} flag`}
+                  className="country-flag"
+                />
+                <p className="country-name">{countryName}</p>
+              </article>
+            )
+          })}
         </section>
       )}
 
